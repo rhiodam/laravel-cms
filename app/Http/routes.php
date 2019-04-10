@@ -27,6 +27,11 @@ Route::get('/about', function () {
     return "About Page";
 });
 
+Route::get('/post/{id}', 'PostController@index');
+
+Route::resource('post' , 'PostController');
+
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
