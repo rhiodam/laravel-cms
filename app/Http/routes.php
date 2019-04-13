@@ -16,21 +16,26 @@ Route::get('/', function () {
 });
 
 Route::get('/contact', function () {
-    return "Contact Page";
+//    return "Contact Page";
+    return view('static.contact');
 });
 
 Route::get('/admin', function () {
     return "Admin Page";
+
 });
 
 Route::get('/about', function () {
-    return "About Page";
+//    return "About Page";
+    return view('static.about');
 });
 
-Route::get('/post/{id}', 'PostController@index');
+//Route::get('/post/{id}', 'PostController@index');
 
-Route::resource('post' , 'PostController');
+//Route::resource('post' , 'PostController');
 
+
+Route::get('/post/{id}/{username}/{password}', 'PostController@show_post');
 
 /*
 |--------------------------------------------------------------------------

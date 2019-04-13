@@ -13,10 +13,16 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id)
+//    public function index($id)
+//    {
+//        //
+//        return "INDEX :: Its working... id : " . $id;
+//    }
+
+    public function index()
     {
         //
-        return "INDEX :: Its working... id : " . $id;
+        return "INDEX :: Its working...";
     }
 
     /**
@@ -88,4 +94,13 @@ class PostController extends Controller
     {
         //
     }
+
+        public function show_post($id , $username ,$password)
+    {
+        //
+//        return view('post/post')->with('id',$id);
+        return view('post/post', compact('id' , 'username','password'));
+    }
+
+
 }
